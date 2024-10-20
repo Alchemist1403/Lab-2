@@ -22,7 +22,7 @@ for node in elements:
                     Charcode = child.firstChild.data
             if child.tagName == 'Nominal':
                 if child.firstChild.nodeType == 3:
-                    Nominal = child.firstChild.data
+                    Nominal = int(child.firstChild.data)
 
     Charcode_nominal_dict[Charcode] = Nominal
 

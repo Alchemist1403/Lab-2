@@ -10,7 +10,7 @@ with open('books-en.csv', 'r', encoding='windows-1251') as csvfile:
         books_data = [i for i in file]
         books_data.pop(0)
         for row in range(1,21):
-            random_book = books_data[randint(1,2000)]
+            random_book = books_data[randint(1,len(books_data)-20)]
             print(f'{row}. {random_book[2]}. {random_book[1]} - {random_book[3]}')
             output.write(f'{row}. {random_book[2]}. {random_book[1]} - {random_book[3]}\n')
 

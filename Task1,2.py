@@ -1,4 +1,5 @@
 from csv import reader 
+
 RED = '\u001b[41m' 
 LIGHT_GREEN = '\u001b[42m'
 YELLOW = '\u001b[43m'
@@ -16,9 +17,7 @@ while True:
     else:
         with open('books-en.csv', 'r', encoding='windows-1251') as csvfile:
             file = reader(csvfile, delimiter=';')
-            books_data = [i for i in file]
-            books_data.pop(0)
-            for row in books_data:
+            for row in file:
                 lower_case = row[2].lower()
                 index = lower_case.find(request.lower())
                 if index != -1:
