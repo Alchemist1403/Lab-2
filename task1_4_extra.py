@@ -1,4 +1,6 @@
-from csv import reader 
+'''Module providing a function reading csv file'''
+
+from csv import reader
 
 
 # Перечень всех издательств без повторений
@@ -10,6 +12,6 @@ with open('books-en.csv', 'r', encoding='windows-1251') as csvfile:
     books_data.pop(0)
     for row in books_data:
         publishers.append(row[4])
-        
+
 for publisher in set(publishers):
     print(publisher)

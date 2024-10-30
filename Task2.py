@@ -1,7 +1,9 @@
+'''Module providing a functions working with xml files'''
+
 import xml.dom.minidom as minidom
 
 
-xml_file = open('currency.xml', 'r') # Чтение файла
+xml_file = open('currency.xml', 'r', encoding='windows-1251') # Чтение файла
 xml_data = xml_file.read()
 
 dom = minidom.parseString(xml_data) # Распарсить файл
@@ -9,7 +11,7 @@ dom.normalize() # Оптимизирует работу с файлом
 
 elements = dom.getElementsByTagName('Valute')
 
-charcode_nominal_dict = {} # Пустой словарь 
+charcode_nominal_dict = {} # Пустой словарь
 
 charcode = ''
 nominal = ''
@@ -29,4 +31,3 @@ for node in elements:
 print(charcode_nominal_dict)
 
 xml_file.close()
-            

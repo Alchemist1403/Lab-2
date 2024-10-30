@@ -1,4 +1,6 @@
-from csv import reader 
+'''Module providing a function reading csv file'''
+
+from csv import reader
 
 
 # Найти Книги, названия которых содержат более 30 символов
