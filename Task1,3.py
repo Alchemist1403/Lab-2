@@ -1,6 +1,7 @@
 from csv import reader 
 from random import randint
 
+
 # Генератор библиографических ссылок
 
 output = open('Book_result.txt', 'w')
